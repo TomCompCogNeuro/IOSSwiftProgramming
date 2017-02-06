@@ -24,29 +24,48 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-La-6hi">
-                                <rect key="frame" x="266.5" y="78.5" width="67" height="30"/>
+                                <rect key="frame" x="266" y="78" width="67" height="30"/>
                                 <state key="normal" title="PUSH ME"/>
                                 <connections>
                                     <action selector="ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpH-0w-VqM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6X-oo-Rnn">
-                                <rect key="frame" x="246" y="121" width="109" height="30"/>
-                                <state key="normal" title="PUSH ME NEXT"/>
-                                <connections>
-                                    <action selector="PushButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2p-YY-KoI"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n14-1u-Erc">
+                                <rect key="frame" x="287" y="0.0" width="25" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-9k-Jfg">
+                                <rect key="frame" x="249.5" y="220" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8pA-ej-4Ld"/>
+                                    <constraint firstAttribute="width" constant="100" id="Otb-2V-8mW"/>
+                                    <constraint firstAttribute="height" constant="30" id="tNL-Jk-0zy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCj-dS-RgA">
+                                <rect key="frame" x="250" y="176" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3wL-Fu-T18"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V6W-9k-Jfg" secondAttribute="bottom" constant="350" id="6Qu-Vk-5E4"/>
                             <constraint firstItem="FVi-cy-2A7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AqA-So-Bhy"/>
-                            <constraint firstItem="H6X-oo-Rnn" firstAttribute="top" secondItem="4fd-La-6hi" secondAttribute="bottom" constant="12.5" id="Cu7-V8-UrI"/>
                             <constraint firstItem="4fd-La-6hi" firstAttribute="top" secondItem="FVi-cy-2A7" secondAttribute="bottom" constant="8" id="Hem-Hy-x3O"/>
                             <constraint firstItem="4fd-La-6hi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QQh-JG-zks"/>
-                            <constraint firstItem="H6X-oo-Rnn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RKP-O9-F4V"/>
                             <constraint firstItem="4fd-La-6hi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vdg-Nr-Ylf"/>
+                            <constraint firstItem="V6W-9k-Jfg" firstAttribute="top" secondItem="aCj-dS-RgA" secondAttribute="bottom" constant="14" id="aCT-xs-j34"/>
+                            <constraint firstItem="V6W-9k-Jfg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gxj-IH-Roc"/>
+                            <constraint firstItem="aCj-dS-RgA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i9l-vN-Mhv"/>
                             <constraint firstItem="FVi-cy-2A7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="nHY-Mu-k3a"/>
+                            <constraint firstItem="n14-1u-Erc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nTE-Rp-N4s"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -55,6 +74,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="aCj-dS-RgA" id="pSz-lo-wp1"/>
+                        <outlet property="text2" destination="V6W-9k-Jfg" id="v3k-Tb-qTv"/>
                         <outlet property="theLabel" destination="FVi-cy-2A7" id="hdv-H0-jOb"/>
                     </connections>
                 </viewController>

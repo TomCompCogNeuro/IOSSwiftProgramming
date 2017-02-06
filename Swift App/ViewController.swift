@@ -12,26 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
-    var tapcount = 0;
     
-    @IBAction func PushButton2(sender: AnyObject) {
-        
-        theLabel.text = "Chicken Pants"
-        tapcount = tapcount + 1
-        print(tapcount)
-        
-        if tapcount > 10 {
-            theLabel.text = "You've pressed the button 10 times"
-        }
-        
-    }
+    @IBOutlet weak var text1: UITextField!
+    @IBOutlet weak var text2: UITextField!
+
     @IBAction func ButtonTapped(sender: AnyObject) {
         
-        theLabel.text = "Cheese Steak"
-        tapcount = tapcount + 1
-        print(tapcount)
-        
-        
+        print(text1.text!)
+        print(text2.text!)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
